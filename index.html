@@ -24,7 +24,10 @@
     <title>Tip calculator app</title>
   </head>
   <body>
-    <h4>SPLITTER</h4>
+    <div id="title_container">
+      <p class="title">SPLITTER</p>
+    </div>
+
     <div id="splitter_container">
       <div class="left_card">
         <div class="bill">
@@ -37,6 +40,7 @@
           </svg>
           <input type="number" name="bill" id="bill" step="0.01" min="0" />
         </div>
+
         <div class="select_tip">
           Select Tip %
           <button><span id="percent_five">5</span>%</button>
@@ -46,6 +50,7 @@
           <button><span id="percent_fifty">50</span>%</button>
           <input id="custom" type="button" value="Custom" />
         </div>
+
         <div class="nb_people">
           <label for="nb_people">Number of People</label>
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16">
@@ -63,12 +68,13 @@
           />
         </div>
       </div>
+
       <div class="right_card">
         <div class="tip">
-          Tip Amount / person <span id="tip_amount" step="0.01">0.00</span>
+          Tip Amount / person <span id="tip_amount" step="0.01">$0.00</span>
         </div>
         <div class="total">
-          Total / person <span id="total_person">0.00</span>
+          Total / person <span id="total_person">$0.00</span>
         </div>
         <div class="reset"><button id="reset">Reset</button></div>
       </div>

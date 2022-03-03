@@ -1,11 +1,12 @@
 body {
-  background-color: #c5e4e7;
+  background-color: hsl(185, 41%, 84%);
   font-family: "Space Mono", monospace;
 }
 
 /**
 * Title
 */
+
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -15,5 +16,3 @@ input::-webkit-inner-spin-button {
   height: 5vh;
   width: 40vw;
 }
-
-/*# sourceMappingURL=style.css.map */
