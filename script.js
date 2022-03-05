@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     percentFive.addEventListener("click", () => {
       percentAmount = 5;
       console.log(percentAmount);
+
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     percentTen.addEventListener("click", () => {
       percentAmount = 10;
       console.log(percentAmount);
+
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);
@@ -52,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     percentFifteen.addEventListener("click", () => {
       percentAmount = 15;
       console.log(percentAmount);
+
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);
@@ -70,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     percentTwentyFive.addEventListener("click", () => {
       percentAmount = 25;
       console.log(percentAmount);
+
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);
@@ -87,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     percentFifty.addEventListener("click", () => {
       percentAmount = 50;
       console.log(percentAmount);
+
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);

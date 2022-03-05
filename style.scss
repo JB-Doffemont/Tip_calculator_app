@@ -1,18 +1,52 @@
-body {
-  background-color: hsl(185, 41%, 84%);
-  font-family: "Space Mono", monospace;
+/**
+* Variables
+*/
+
+$white: hsl(0, 0%, 100%);
+$veryLightCyan: hsl(189, 41%, 97%);
+$lightCyan: hsl(185, 41%, 84%);
+$lightDarkCyan: hsl(184, 14%, 56%);
+$darkCyan: hsl(186, 14%, 43%);
+$strongDarkCyan: hsl(183, 100%, 15%);
+
+$font: "Space Mono", monospace;
+$fontSizeInput: 24px;
+
+$width: 8vw;
+$height: 7vh;
+
+@mixin border-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
 }
 
-/**
-* Title
-*/
+body {
+  background-color: $lightCyan;
+  font-family: $font;
+}
 
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.custom {
-  height: 5vh;
-  width: 40vw;
+.select_tip {
+  input {
+    @include border-radius(5px);
+    color: $white;
+    background-color: $strongDarkCyan;
+    font-size: $fontSizeInput;
+    height: $height;
+    width: $width;
+    font-weight: 700;
+    border: none;
+  }
+
+  #custom {
+    color: $darkCyan;
+    background-color: $white;
+    font-weight: 700;
+    text-align: end;
+  }
 }
