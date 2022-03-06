@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
   custom.addEventListener("click", () => {
     custom.type = "number";
     custom.value = "";
+    custom.className = "clicked";
     // Event to calculate total amount of tips
     custom.addEventListener("input", () => {
       console.log(custom.value);

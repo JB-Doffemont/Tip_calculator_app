@@ -1,52 +1,127 @@
-/**
-* Variables
-*/
-
-$white: hsl(0, 0%, 100%);
-$veryLightCyan: hsl(189, 41%, 97%);
-$lightCyan: hsl(185, 41%, 84%);
-$lightDarkCyan: hsl(184, 14%, 56%);
-$darkCyan: hsl(186, 14%, 43%);
-$strongDarkCyan: hsl(183, 100%, 15%);
-
-$font: "Space Mono", monospace;
-$fontSizeInput: 24px;
-
-$width: 8vw;
-$height: 7vh;
-
-@mixin border-radius($value) {
-  -webkit-border-radius: $value;
-  -moz-border-radius: $value;
-  border-radius: $value;
-}
+@import "import/mixin.scss";
+@import "import/variables.scss";
 
 body {
   background-color: $lightCyan;
   font-family: $font;
 }
 
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+/**
+* Title
+*/
+
+#title_container {
+  width: 5vw;
+  font-weight: 700;
+  letter-spacing: 0.5vw;
+  overflow-wrap: break-word;
+  position: fixed;
+  left: 50%;
+  top: 20%;
 }
 
-.select_tip {
-  input {
-    @include border-radius(5px);
-    color: $white;
-    background-color: $strongDarkCyan;
-    font-size: $fontSizeInput;
-    height: $height;
-    width: $width;
-    font-weight: 700;
-    border: none;
+/**
+* Main Card
+*/
+
+#splitter_container {
+  @include border-radius(15px);
+  display: flex;
+  background-color: $white;
+  width: 49vw;
+  height: 50vh;
+  position: fixed;
+  left: 25%;
+  top: 35%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $lightDarkCyan;
+
+  /**
+  * Left side
+  */
+
+  .left_card {
+    width: 50%;
+    height: 90%;
+    margin: 1rem;
+    padding-top: 0.9rem;
+    padding-left: 0.9rem;
+
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .bill {
+      margin-bottom: 2.5vh;
+
+      input {
+        font-size: $fontSizeInput;
+        height: 5vh;
+        background-color: $veryLightCyan;
+        border-style: none;
+        @include border-radius(5px);
+
+        outline-color: $strongCyan;
+      }
+    }
+
+    /**
+    * First part
+    */
+
+    .select_tip {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4vh;
+      input {
+        @include border-radius(5px);
+        font-family: $font;
+        color: $white;
+        background-color: $strongDarkCyan;
+        font-size: $fontSizeInput;
+        height: $height;
+        width: $width;
+        font-weight: 700;
+        border: none;
+        caret-color: $strongCyan;
+      }
+
+      .second_raw {
+        margin-top: 1.5vh;
+      }
+
+      #custom {
+        color: $darkCyan;
+        background-color: $white;
+        font-weight: 700;
+      }
+
+      .clicked {
+        text-align: end;
+        padding-right: 0.5vw;
+        outline-color: $strongCyan;
+        width: 6vw;
+      }
+    }
+
+    .nb_people {
+      input {
+        font-size: $fontSizeInput;
+        height: 5vh;
+        background-color: $veryLightCyan;
+        border-style: none;
+        @include border-radius(5px);
+      }
+    }
   }
 
-  #custom {
-    color: $darkCyan;
-    background-color: $white;
-    font-weight: 700;
-    text-align: end;
+  .right_card {
+    width: 50%;
+    height: 90%;
+    margin: 1rem;
+    @include border-radius(15px);
+    background-color: $strongDarkCyan;
   }
 }

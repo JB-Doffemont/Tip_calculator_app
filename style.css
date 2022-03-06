@@ -1,4 +1,7 @@
 /**
+* Mixins
+*/
+/**
 * Variables
 */
 body {
@@ -6,28 +9,117 @@ body {
   font-family: "Space Mono", monospace;
 }
 
-input::-webkit-inner-spin-button {
+/**
+* Title
+*/
+#title_container {
+  width: 5vw;
+  font-weight: 700;
+  letter-spacing: 0.5vw;
+  overflow-wrap: break-word;
+  position: fixed;
+  left: 50%;
+  top: 20%;
+}
+
+/**
+* Main Card
+*/
+#splitter_container {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  display: flex;
+  background-color: white;
+  width: 49vw;
+  height: 50vh;
+  position: fixed;
+  left: 25%;
+  top: 35%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #7f9c9f;
+  /**
+  * Left side
+  */
+}
+#splitter_container .left_card {
+  width: 50%;
+  height: 90%;
+  margin: 1rem;
+  padding-top: 0.9rem;
+  padding-left: 0.9rem;
+  /**
+  * First part
+  */
+}
+#splitter_container .left_card input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-.select_tip input {
+#splitter_container .left_card .bill {
+  margin-bottom: 2.5vh;
+}
+#splitter_container .left_card .bill input {
+  font-size: 24px;
+  height: 5vh;
+  background-color: #f4fafa;
+  border-style: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  outline-color: #26c0ab;
+}
+#splitter_container .left_card .select_tip {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4vh;
+}
+#splitter_container .left_card .select_tip input {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
   color: white;
   background-color: #00494d;
   font-size: 24px;
-  height: 7vh;
-  width: 8vw;
+  height: 6vh;
+  width: 6.5vw;
   font-weight: 700;
   border: none;
+  caret-color: #26c0ab;
 }
-.select_tip #custom {
+#splitter_container .left_card .select_tip .second_raw {
+  margin-top: 1.5vh;
+}
+#splitter_container .left_card .select_tip #custom {
   color: #5e7a7d;
   background-color: white;
   font-weight: 700;
+}
+#splitter_container .left_card .select_tip .clicked {
   text-align: end;
+  padding-right: 0.5vw;
+  outline-color: #26c0ab;
+  width: 6vw;
+}
+#splitter_container .left_card .nb_people input {
+  font-size: 24px;
+  height: 5vh;
+  background-color: #f4fafa;
+  border-style: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#splitter_container .right_card {
+  width: 50%;
+  height: 90%;
+  margin: 1rem;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #00494d;
 }
 
 /*# sourceMappingURL=style.css.map */
