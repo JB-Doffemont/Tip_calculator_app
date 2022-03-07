@@ -62,6 +62,9 @@ body {
   * Third part
   */
 }
+#splitter_container .left_card .label {
+  margin-bottom: 1vh;
+}
 #splitter_container .left_card input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -69,7 +72,12 @@ body {
 #splitter_container .left_card .bill {
   margin-bottom: 2.5vh;
 }
-#splitter_container .left_card .bill #bill_input {
+#splitter_container .left_card .bill #dollar {
+  position: fixed;
+  top: 43.3%;
+  left: 28%;
+}
+#splitter_container .left_card .bill input {
   font-size: 24px;
   font-family: "Space Mono", monospace;
   height: 5vh;
@@ -79,11 +87,13 @@ body {
   -moz-border-radius: 5px;
   border-radius: 5px;
   outline-color: #26c0ab;
-  padding-right: 0.5vw;
-}
-#splitter_container .left_card .bill .clicked {
   text-align: end;
   padding-right: 0.5vw;
+  color: #7f9c9f;
+}
+#splitter_container .left_card .bill .clicked {
+  color: #00494d;
+  font-weight: 700;
 }
 #splitter_container .left_card .select_tip {
   display: flex;
@@ -113,10 +123,20 @@ body {
   font-weight: 700;
 }
 #splitter_container .left_card .select_tip .clicked {
+  background-color: #26c0ab;
+  color: #00494d;
+  font-weight: 700;
+}
+#splitter_container .left_card .select_tip .custom_clicked {
   text-align: end;
   padding-right: 0.5vw;
   outline-color: #26c0ab;
   width: 6vw;
+}
+#splitter_container .left_card .nb_people #person {
+  position: fixed;
+  top: 78%;
+  left: 28%;
 }
 #splitter_container .left_card .nb_people input {
   font-size: 24px;
@@ -127,13 +147,16 @@ body {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-}
-#splitter_container .left_card .nb_people .clicked {
   text-align: end;
   padding-right: 0.5vw;
+  color: #7f9c9f;
+}
+#splitter_container .left_card .nb_people .clicked {
+  color: #00494d;
+  font-weight: 700;
 }
 #splitter_container .left_card .nb_people #error_message {
-  margin-left: 1.3vw;
+  margin-left: 2.2vw;
   color: #f2960d;
 }
 #splitter_container .right_card {
@@ -144,6 +167,43 @@ body {
   -moz-border-radius: 15px;
   border-radius: 15px;
   background-color: #00494d;
+}
+#splitter_container .right_card .tip, #splitter_container .right_card .total {
+  display: flex;
+  margin: 6vh 1vw;
+}
+#splitter_container .right_card .tip .text, #splitter_container .right_card .total .text {
+  color: white;
+  font-weight: 400;
+}
+#splitter_container .right_card .tip .text p, #splitter_container .right_card .total .text p {
+  color: #7f9c9f;
+  margin: 0;
+}
+#splitter_container .right_card .tip #tip_amount, #splitter_container .right_card .total #tip_amount {
+  font-size: 31px;
+  margin-left: 5vw;
+  color: #26c0ab;
+}
+#splitter_container .right_card .total #total_person {
+  font-size: 31px;
+  margin-left: 6.2vw;
+  color: #26c0ab;
+}
+#splitter_container .right_card #reset {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 18vw;
+  height: 5vh;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #26c0ab;
+  color: #00494d;
+  opacity: 25%;
+  margin: 6vh 2vw;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

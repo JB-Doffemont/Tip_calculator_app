@@ -48,6 +48,10 @@ body {
     padding-top: 0.9rem;
     padding-left: 0.9rem;
 
+    .label {
+      margin-bottom: 1vh;
+    }
+
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
@@ -60,7 +64,13 @@ body {
     .bill {
       margin-bottom: 2.5vh;
 
-      #bill_input {
+      #dollar {
+        position: fixed;
+        top: 43.3%;
+        left: 28%;
+      }
+
+      input {
         font-size: $fontSizeInput;
         font-family: $font;
         height: 5vh;
@@ -68,12 +78,14 @@ body {
         border-style: none;
         @include border-radius(5px);
         outline-color: $strongCyan;
+        text-align: end;
         padding-right: 0.5vw;
+        color: $lightDarkCyan;
       }
 
       .clicked {
-        text-align: end;
-        padding-right: 0.5vw;
+        color: $strongDarkCyan;
+        font-weight: 700;
       }
     }
 
@@ -109,6 +121,12 @@ body {
       }
 
       .clicked {
+        background-color: $strongCyan;
+        color: $strongDarkCyan;
+        font-weight: 700;
+      }
+
+      .custom_clicked {
         text-align: end;
         padding-right: 0.5vw;
         outline-color: $strongCyan;
@@ -121,6 +139,12 @@ body {
     */
 
     .nb_people {
+      #person {
+        position: fixed;
+        top: 78%;
+        left: 28%;
+      }
+
       input {
         font-size: $fontSizeInput;
         font-family: $font;
@@ -128,15 +152,18 @@ body {
         background-color: $veryLightCyan;
         border-style: none;
         @include border-radius(5px);
+        text-align: end;
+        padding-right: 0.5vw;
+        color: $lightDarkCyan;
       }
 
       .clicked {
-        text-align: end;
-        padding-right: 0.5vw;
+        color: $strongDarkCyan;
+        font-weight: 700;
       }
 
       #error_message {
-        margin-left: 1.3vw;
+        margin-left: 2.2vw;
         color: hsl(36, 90%, 50%);
       }
     }
@@ -152,5 +179,47 @@ body {
     margin: 1rem;
     @include border-radius(15px);
     background-color: $strongDarkCyan;
+
+    .tip {
+      display: flex;
+      margin: 6vh 1vw;
+      .text {
+        color: $white;
+        font-weight: 400;
+
+        p {
+          color: $lightDarkCyan;
+          margin: 0;
+        }
+      }
+      #tip_amount {
+        font-size: 31px;
+        margin-left: 5vw;
+        color: $strongCyan;
+      }
+    }
+
+    .total {
+      @extend .tip;
+
+      #total_person {
+        font-size: 31px;
+        margin-left: 6.2vw;
+        color: $strongCyan;
+      }
+    }
+    #reset {
+      @include border-radius(5px);
+      width: 18vw;
+      height: 5vh;
+      font-family: $font;
+      font-weight: 700;
+      font-size: 15px;
+      background-color: $strongCyan;
+      color: $strongDarkCyan;
+      opacity: 25%;
+      margin: 6vh 2vw;
+      border: none;
+    }
   }
 }

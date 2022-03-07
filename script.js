@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function tipAmountFive() {
     // Event on click to define the percentage
     percentFive.addEventListener("click", () => {
+      percentFive.className = "clicked";
       percentAmount = 5;
       console.log(percentAmount);
 
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
-        tipAmount.innerHTML = tipPerson;
+        tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
 
         totalPerPerson();
       });
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function tipAmountTen() {
     percentTen.addEventListener("click", () => {
+      percentTen.className = "clicked";
       percentAmount = 10;
       console.log(percentAmount);
 
@@ -49,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
-        tipAmount.innerHTML = tipPerson;
+        tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
 
         totalPerPerson();
       });
@@ -59,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function tipAmountFifteen() {
     percentFifteen.addEventListener("click", () => {
+      percentFifteen.className = "clicked";
       percentAmount = 15;
       console.log(percentAmount);
 
@@ -70,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
-        tipAmount.innerHTML = tipPerson;
+        tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
 
         totalPerPerson();
       });
@@ -81,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function tipAmountTwentyFive() {
     percentTwentyFive.addEventListener("click", () => {
+      percentTwentyFive.className = "clicked";
       percentAmount = 25;
       console.log(percentAmount);
 
@@ -92,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
-        tipAmount.innerHTML = tipPerson;
+        tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
 
         totalPerPerson();
       });
@@ -102,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function tipAmountFifty() {
     percentFifty.addEventListener("click", () => {
+      percentFifty.className = "clicked";
       percentAmount = 50;
       console.log(percentAmount);
 
@@ -113,8 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
-        tipAmount.innerHTML = tipPerson;
-
+        tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
         totalPerPerson();
       });
     });
@@ -124,7 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to get the total amount by person
   function totalPerPerson() {
-    totalPerson.innerHTML = bill.value / person.value + tipPerson;
+    totalPerson.innerHTML =
+      "$" + Math.round((bill.value / person.value + tipPerson) * 100) / 100;
     return totalPerson;
   }
 
@@ -132,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
   custom.addEventListener("click", () => {
     custom.type = "number";
     custom.value = "";
-    custom.className = "clicked";
+    custom.className = "custom_clicked";
     // Event to calculate total amount of tips
     custom.addEventListener("input", () => {
       console.log(custom.value);
@@ -145,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
-        tipAmount.innerHTML = tipPerson;
+        tipAmount.innerHTML = "$" + Math.round(tipPerson);
 
         totalPerPerson();
       });
@@ -163,9 +168,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function inputActive() {
     // event to get class name on click
     person.addEventListener("click", () => {
+      person.value = "";
       person.className = "clicked";
     });
     bill.addEventListener("click", () => {
+      bill.value = "";
       bill.className = "clicked";
     });
   }
