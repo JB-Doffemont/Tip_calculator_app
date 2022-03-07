@@ -42,6 +42,9 @@ body {
   /**
   * Left side
   */
+  /**
+  * Right side
+  */
 }
 #splitter_container .left_card {
   width: 50%;
@@ -52,6 +55,12 @@ body {
   /**
   * First part
   */
+  /**
+  * Second part
+  */
+  /**
+  * Third part
+  */
 }
 #splitter_container .left_card input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -60,8 +69,9 @@ body {
 #splitter_container .left_card .bill {
   margin-bottom: 2.5vh;
 }
-#splitter_container .left_card .bill input {
+#splitter_container .left_card .bill #bill_input {
   font-size: 24px;
+  font-family: "Space Mono", monospace;
   height: 5vh;
   background-color: #f4fafa;
   border-style: none;
@@ -69,6 +79,11 @@ body {
   -moz-border-radius: 5px;
   border-radius: 5px;
   outline-color: #26c0ab;
+  padding-right: 0.5vw;
+}
+#splitter_container .left_card .bill .clicked {
+  text-align: end;
+  padding-right: 0.5vw;
 }
 #splitter_container .left_card .select_tip {
   display: flex;
@@ -85,7 +100,7 @@ body {
   font-size: 24px;
   height: 6vh;
   width: 6.5vw;
-  font-weight: 700;
+  font-weight: 500;
   border: none;
   caret-color: #26c0ab;
 }
@@ -105,12 +120,21 @@ body {
 }
 #splitter_container .left_card .nb_people input {
   font-size: 24px;
+  font-family: "Space Mono", monospace;
   height: 5vh;
   background-color: #f4fafa;
   border-style: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+#splitter_container .left_card .nb_people .clicked {
+  text-align: end;
+  padding-right: 0.5vw;
+}
+#splitter_container .left_card .nb_people #error_message {
+  margin-left: 1.3vw;
+  color: #f2960d;
 }
 #splitter_container .right_card {
   width: 50%;

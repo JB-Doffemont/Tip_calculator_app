@@ -53,22 +53,32 @@ body {
       margin: 0;
     }
 
+    /**
+    * First part
+    */
+
     .bill {
       margin-bottom: 2.5vh;
 
-      input {
+      #bill_input {
         font-size: $fontSizeInput;
+        font-family: $font;
         height: 5vh;
         background-color: $veryLightCyan;
         border-style: none;
         @include border-radius(5px);
-
         outline-color: $strongCyan;
+        padding-right: 0.5vw;
+      }
+
+      .clicked {
+        text-align: end;
+        padding-right: 0.5vw;
       }
     }
 
     /**
-    * First part
+    * Second part
     */
 
     .select_tip {
@@ -83,7 +93,7 @@ body {
         font-size: $fontSizeInput;
         height: $height;
         width: $width;
-        font-weight: 700;
+        font-weight: 500;
         border: none;
         caret-color: $strongCyan;
       }
@@ -106,16 +116,35 @@ body {
       }
     }
 
+    /**
+    * Third part
+    */
+
     .nb_people {
       input {
         font-size: $fontSizeInput;
+        font-family: $font;
         height: 5vh;
         background-color: $veryLightCyan;
         border-style: none;
         @include border-radius(5px);
       }
+
+      .clicked {
+        text-align: end;
+        padding-right: 0.5vw;
+      }
+
+      #error_message {
+        margin-left: 1.3vw;
+        color: hsl(36, 90%, 50%);
+      }
     }
   }
+
+  /**
+  * Right side
+  */
 
   .right_card {
     width: 50%;

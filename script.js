@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Call elements from Dom
-  let bill = document.querySelector("#bill");
+  let bill = document.querySelector("#bill_input");
   let percentAmount = "";
   let percentFive = document.querySelector("#percent_five");
   let percentTen = document.querySelector("#percent_ten");
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let totalPerson = document.querySelector("#total_person");
   let custom = document.querySelector("#custom");
   let reset = document.querySelector("#reset");
+  let error = document.querySelector("#error_message");
 
   function tipAmountFive() {
     // Event on click to define the percentage
@@ -22,6 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);
+        if (person.value == 0) {
+          error.style.display = "inline";
+        }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
         tipAmount.innerHTML = tipPerson;
@@ -40,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);
+        if (person.value == 0) {
+          error.style.display = "inline";
+        }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
         tipAmount.innerHTML = tipPerson;
@@ -58,6 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);
+        if (person.value == 0) {
+          error.style.display = "inline";
+        }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
         tipAmount.innerHTML = tipPerson;
@@ -77,6 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);
+        if (person.value == 0) {
+          error.style.display = "inline";
+        }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
         tipAmount.innerHTML = tipPerson;
@@ -95,6 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
       person.addEventListener("input", () => {
         total_tip = (bill.value * percentAmount) / 100;
         console.log(total_tip);
+        if (person.value == 0) {
+          error.style.display = "inline";
+        }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
         tipAmount.innerHTML = tipPerson;
@@ -124,6 +140,9 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(total_tip);
       // Event to calculate tips + total per person
       person.addEventListener("input", () => {
+        if (person.value == 0) {
+          error.style.display = "inline";
+        }
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
         tipAmount.innerHTML = tipPerson;
@@ -140,4 +159,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   resetField();
+
+  function inputActive() {
+    // event to get class name on click
+    person.addEventListener("click", () => {
+      person.className = "clicked";
+    });
+    bill.addEventListener("click", () => {
+      bill.className = "clicked";
+    });
+  }
+
+  inputActive();
 });
