@@ -86,7 +86,7 @@ body {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  outline-color: #26c0ab;
+  outline-color: #c5e4e7;
   text-align: end;
   padding-right: 0.5vw;
   color: #7f9c9f;
@@ -113,6 +113,11 @@ body {
   font-weight: 500;
   border: none;
   caret-color: #26c0ab;
+}
+#splitter_container .left_card .select_tip input:hover {
+  font-weight: 700;
+  color: #00494d;
+  background-color: #c5e4e7;
 }
 #splitter_container .left_card .select_tip .second_raw {
   margin-top: 1.5vh;
@@ -150,6 +155,7 @@ body {
   text-align: end;
   padding-right: 0.5vw;
   color: #7f9c9f;
+  outline-color: #c5e4e7;
 }
 #splitter_container .left_card .nb_people .clicked {
   color: #00494d;
@@ -204,6 +210,29 @@ body {
   opacity: 25%;
   margin: 6vh 2vw;
   border: none;
+}
+#splitter_container .right_card #reset:hover {
+  background-color: #c5e4e7;
+  opacity: 100%;
+}
+#splitter_container .right_card #completed {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 18vw;
+  height: 5vh;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #26c0ab;
+  color: #00494d;
+  margin: 6vh 2vw;
+  border: none;
+  opacity: none;
+}
+#splitter_container .right_card #completed:hover {
+  background-color: #c5e4e7;
+  opacity: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
