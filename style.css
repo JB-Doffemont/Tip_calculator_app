@@ -18,7 +18,7 @@ body {
   letter-spacing: 0.5vw;
   overflow-wrap: break-word;
   position: fixed;
-  left: 50%;
+  left: 49%;
   top: 20%;
 }
 
@@ -113,14 +113,12 @@ body {
   font-weight: 500;
   border: none;
   caret-color: #26c0ab;
+  margin-bottom: 1.2vh;
 }
 #splitter_container .left_card .select_tip input:hover {
   font-weight: 700;
   color: #00494d;
   background-color: #c5e4e7;
-}
-#splitter_container .left_card .select_tip .second_raw {
-  margin-top: 1.5vh;
 }
 #splitter_container .left_card .select_tip #custom {
   color: #5e7a7d;
@@ -173,6 +171,9 @@ body {
   -moz-border-radius: 15px;
   border-radius: 15px;
   background-color: #00494d;
+  /**
+  * Button reset
+  */
 }
 #splitter_container .right_card .tip, #splitter_container .right_card .total {
   display: flex;
@@ -233,6 +234,100 @@ body {
 #splitter_container .right_card #completed:hover {
   background-color: #c5e4e7;
   opacity: 100%;
+}
+
+/**
+* Media Queries
+*/
+@media screen and (max-width: 376px), (height: 800px) {
+  /**
+  * Title
+  */
+  #title_container {
+    width: 19vw;
+    left: 42%;
+    top: 2%;
+    font-size: larger;
+    letter-spacing: 1.5vw;
+  }
+
+  /**
+  * Main Card
+  */
+  #splitter_container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 16%;
+    /**
+    * Left side
+    */
+    /**
+    * Right side
+    */
+  }
+  #splitter_container .left_card {
+    /**
+    * First part
+    */
+    /*
+    ** Second part
+    */
+    /**
+    * Third part
+    */
+  }
+  #splitter_container .left_card .bill {
+    margin-bottom: 0.5vh;
+  }
+  #splitter_container .left_card .bill #dollar {
+    position: fixed;
+    top: 24.3%;
+    left: 12%;
+  }
+  #splitter_container .left_card .select_tip .select {
+    width: 85vw;
+  }
+  #splitter_container .left_card .select_tip input {
+    height: 5vh;
+    width: 37.5vw;
+    margin-right: 5px;
+    margin-bottom: 11px;
+  }
+  #splitter_container .left_card .select_tip .custom_clicked {
+    width: 36.5vw;
+  }
+  #splitter_container .left_card .nb_people #person {
+    top: 62%;
+    left: 12%;
+  }
+  #splitter_container .right_card {
+    position: fixed;
+    top: 66%;
+    width: 90%;
+    height: 30%;
+  }
+  #splitter_container .right_card .tip, #splitter_container .right_card .total {
+    margin: 2vh 6vw;
+  }
+  #splitter_container .right_card .tip #tip_amount, #splitter_container .right_card .total #tip_amount {
+    margin-left: 25vw;
+  }
+  #splitter_container .right_card .tip #total_person, #splitter_container .right_card .total #total_person {
+    margin-left: 30vw;
+  }
+  #splitter_container .right_card #reset {
+    height: 6vh;
+    width: 79vw;
+    margin: 1vh 5vw;
+  }
+  #splitter_container .right_card #completed {
+    height: 6vh;
+    width: 79vw;
+    margin: 1vh 5vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
