@@ -138,7 +138,7 @@ body {
 }
 #splitter_container .left_card .nb_people #person {
   position: fixed;
-  top: 78%;
+  top: 79%;
   left: 28%;
 }
 #splitter_container .left_card .nb_people input {
@@ -236,6 +236,12 @@ body {
   opacity: 100%;
 }
 
+#footer {
+  position: fixed;
+  top: 95%;
+  left: 32%;
+}
+
 /**
 * Media Queries
 */
@@ -249,6 +255,7 @@ body {
     top: 2%;
     font-size: larger;
     letter-spacing: 1.5vw;
+    color: #5e7a7d;
   }
 
   /**
@@ -327,6 +334,10 @@ body {
     height: 6vh;
     width: 79vw;
     margin: 1vh 5vw;
+  }
+
+  #footer {
+    display: none;
   }
 }
 

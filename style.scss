@@ -144,7 +144,7 @@ body {
     .nb_people {
       #person {
         position: fixed;
-        top: 78%;
+        top: 79%;
         left: 28%;
       }
 
@@ -257,6 +257,12 @@ body {
   }
 }
 
+#footer {
+  position: fixed;
+  top: 95%;
+  left: 32%;
+}
+
 /**
 * Media Queries
 */
@@ -272,6 +278,7 @@ body {
     top: 2%;
     font-size: larger;
     letter-spacing: 1.5vw;
+    color: $darkCyan;
   }
 
   /**
@@ -370,5 +377,9 @@ body {
         margin: 1vh 5vw;
       }
     }
+  }
+
+  #footer {
+    display: none;
   }
 }
