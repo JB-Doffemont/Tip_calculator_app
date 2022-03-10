@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(total_tip);
         tipPerson = total_tip / person.value;
         console.log(tipPerson);
+
         tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
 
         reset.id = "completed";

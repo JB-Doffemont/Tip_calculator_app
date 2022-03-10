@@ -66,7 +66,7 @@ body {
 
       #dollar {
         position: fixed;
-        top: 43.3%;
+        top: 44.3%;
         left: 28%;
       }
 
@@ -81,6 +81,11 @@ body {
         text-align: end;
         padding-right: 0.5vw;
         color: $lightDarkCyan;
+        cursor: pointer;
+      }
+
+      input:hover {
+        border: 1px solid $strongCyan;
       }
 
       .clicked {
@@ -109,6 +114,7 @@ body {
         border: none;
         caret-color: $strongCyan;
         margin-bottom: 1.2vh;
+        cursor: pointer;
       }
 
       input:hover {
@@ -117,21 +123,23 @@ body {
         background-color: $lightCyan;
       }
 
-      #custom {
-        color: $darkCyan;
-        background-color: $white;
-        font-weight: 700;
-      }
-
       .clicked {
         background-color: $strongCyan;
         color: $strongDarkCyan;
         font-weight: 700;
       }
 
+      #custom {
+        color: $darkCyan;
+        background-color: $white;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
       .custom_clicked {
         text-align: end;
         padding-right: 0.5vw;
+        color: $strongDarkCyan !important;
         outline-color: $strongCyan;
         width: 6vw;
       }
@@ -144,7 +152,7 @@ body {
     .nb_people {
       #person {
         position: fixed;
-        top: 79%;
+        top: 81%;
         left: 28%;
       }
 
@@ -159,6 +167,11 @@ body {
         padding-right: 0.5vw;
         color: $lightDarkCyan;
         outline-color: $lightCyan;
+        cursor: pointer;
+      }
+
+      input:hover {
+        border: 1px solid $strongCyan;
       }
 
       .clicked {
@@ -229,6 +242,7 @@ body {
       opacity: 25%;
       margin: 6vh 2vw;
       border: none;
+      cursor: pointer;
     }
 
     #reset:hover {

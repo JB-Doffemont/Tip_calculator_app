@@ -74,7 +74,7 @@ body {
 }
 #splitter_container .left_card .bill #dollar {
   position: fixed;
-  top: 43.3%;
+  top: 44.3%;
   left: 28%;
 }
 #splitter_container .left_card .bill input {
@@ -90,6 +90,10 @@ body {
   text-align: end;
   padding-right: 0.5vw;
   color: #7f9c9f;
+  cursor: pointer;
+}
+#splitter_container .left_card .bill input:hover {
+  border: 1px solid #26c0ab;
 }
 #splitter_container .left_card .bill .clicked {
   color: #00494d;
@@ -114,31 +118,34 @@ body {
   border: none;
   caret-color: #26c0ab;
   margin-bottom: 1.2vh;
+  cursor: pointer;
 }
 #splitter_container .left_card .select_tip input:hover {
   font-weight: 700;
   color: #00494d;
   background-color: #c5e4e7;
 }
-#splitter_container .left_card .select_tip #custom {
-  color: #5e7a7d;
-  background-color: white;
-  font-weight: 700;
-}
 #splitter_container .left_card .select_tip .clicked {
   background-color: #26c0ab;
   color: #00494d;
   font-weight: 700;
 }
+#splitter_container .left_card .select_tip #custom {
+  color: #5e7a7d;
+  background-color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
 #splitter_container .left_card .select_tip .custom_clicked {
   text-align: end;
   padding-right: 0.5vw;
+  color: #00494d !important;
   outline-color: #26c0ab;
   width: 6vw;
 }
 #splitter_container .left_card .nb_people #person {
   position: fixed;
-  top: 79%;
+  top: 81%;
   left: 28%;
 }
 #splitter_container .left_card .nb_people input {
@@ -154,6 +161,10 @@ body {
   padding-right: 0.5vw;
   color: #7f9c9f;
   outline-color: #c5e4e7;
+  cursor: pointer;
+}
+#splitter_container .left_card .nb_people input:hover {
+  border: 1px solid #26c0ab;
 }
 #splitter_container .left_card .nb_people .clicked {
   color: #00494d;
@@ -211,6 +222,7 @@ body {
   opacity: 25%;
   margin: 6vh 2vw;
   border: none;
+  cursor: pointer;
 }
 #splitter_container .right_card #reset:hover {
   background-color: #c5e4e7;

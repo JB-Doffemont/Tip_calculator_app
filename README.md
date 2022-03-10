@@ -1,15 +1,13 @@
 # Frontend Mentor - Tip calculator app solution
 
-
 ## Table of contents
 
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Author](#author)
-
+- [The challenge](#the-challenge)
+- [Screenshot](#screenshot)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Continued development](#continued-development)
+- [Author](#author)
 
 ### The challenge
 
@@ -21,14 +19,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop_design](./desktop_design.png)
-![Mobile_design](./mobile_design.png)
-
+![Desktop_design](./screenshots/desktop_design.png)
+![Mobile_design](./screenshots/mobile_design.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-
 
 ### Built with
 
@@ -42,11 +38,9 @@ Users should be able to:
 
 My goal on top on succes this challenge in JS was to start using and practice SASS.
 
-
 ### Continued development
 
 I would like to continue praticing SASS on my futur project
-
 
 ## Author
 
