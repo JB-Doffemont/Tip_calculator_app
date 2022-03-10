@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://tip-calculator-app-icg55dzk9-jb-doffemont.vercel.app/)
 
 ### Built with
 
