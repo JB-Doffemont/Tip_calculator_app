@@ -184,7 +184,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function resetField() {
     reset.addEventListener("click", () => {
-      document.location.reload();
+      bill.value = "0";
+      custom.value = "Custom";
+      person.value = "0";
+      tipAmount.innerHTML = "$0.00";
+      totalPerson.innerHTML = "$0.00";
     });
   }
 

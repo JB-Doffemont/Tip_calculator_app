@@ -269,19 +269,18 @@ body {
       opacity: 100%;
     }
   }
-}
 
-#footer {
-  position: fixed;
-  top: 95%;
-  left: 32%;
+  #footer {
+    position: fixed;
+    top: 95%;
+    left: 32%;
+  }
 }
-
 /**
 * Media Queries
 */
 
-@media screen and (max-width: 376px), (height: 800px) {
+@media screen and (max-width: 1200px) {
   /**
   * Title
   */

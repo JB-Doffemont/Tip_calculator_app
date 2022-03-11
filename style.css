@@ -247,8 +247,7 @@ body {
   background-color: #c5e4e7;
   opacity: 100%;
 }
-
-#footer {
+#splitter_container #footer {
   position: fixed;
   top: 95%;
   left: 32%;
@@ -257,7 +256,7 @@ body {
 /**
 * Media Queries
 */
-@media screen and (max-width: 376px), (height: 800px) {
+@media screen and (max-width: 1200px) {
   /**
   * Title
   */
