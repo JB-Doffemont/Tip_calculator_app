@@ -86,7 +86,7 @@ body {
   padding-right: 0.5vw;
   color: #7f9c9f;
   cursor: pointer;
-  background-image: url("../tip-calculator-app-main/images/icon-dollar.svg");
+  background-image: url("../../assets/images/icon-dollar.svg");
   background-repeat: no-repeat;
   background-position: top 50% left 4%;
 }
@@ -155,7 +155,7 @@ body {
   color: #7f9c9f;
   outline-color: #c5e4e7;
   cursor: pointer;
-  background-image: url("../tip-calculator-app-main/images/icon-person.svg");
+  background-image: url("../../assets/images/icon-person.svg");
   background-repeat: no-repeat;
   background-position: top 50% left 4%;
 }
@@ -182,23 +182,19 @@ body {
   * Button reset
   */
 }
-#splitter_container .right_card .tip,
-#splitter_container .right_card .total {
+#splitter_container .right_card .tip, #splitter_container .right_card .total {
   display: flex;
   margin: 6vh 1vw;
 }
-#splitter_container .right_card .tip .text,
-#splitter_container .right_card .total .text {
+#splitter_container .right_card .tip .text, #splitter_container .right_card .total .text {
   color: white;
   font-weight: 400;
 }
-#splitter_container .right_card .tip .text p,
-#splitter_container .right_card .total .text p {
+#splitter_container .right_card .tip .text p, #splitter_container .right_card .total .text p {
   color: #7f9c9f;
   margin: 0;
 }
-#splitter_container .right_card .tip #tip_amount,
-#splitter_container .right_card .total #tip_amount {
+#splitter_container .right_card .tip #tip_amount, #splitter_container .right_card .total #tip_amount {
   font-size: 31px;
   margin-left: 5vw;
   color: #26c0ab;
@@ -286,7 +282,17 @@ body {
     * Right side
     */
   }
-
+  #splitter_container .left_card {
+    /**
+    * First part
+    */
+    /*
+    ** Second part
+    */
+    /**
+    * Third part
+    */
+  }
   #splitter_container .left_card .bill {
     margin-bottom: 0.5vh;
   }
@@ -317,16 +323,13 @@ body {
     width: 90%;
     height: 30%;
   }
-  #splitter_container .right_card .tip,
-  #splitter_container .right_card .total {
+  #splitter_container .right_card .tip, #splitter_container .right_card .total {
     margin: 2vh 6vw;
   }
-  #splitter_container .right_card .tip #tip_amount,
-  #splitter_container .right_card .total #tip_amount {
+  #splitter_container .right_card .tip #tip_amount, #splitter_container .right_card .total #tip_amount {
     margin-left: 25vw;
   }
-  #splitter_container .right_card .tip #total_person,
-  #splitter_container .right_card .total #total_person {
+  #splitter_container .right_card .tip #total_person, #splitter_container .right_card .total #total_person {
     margin-left: 30vw;
   }
   #splitter_container .right_card #reset {
