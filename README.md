@@ -32,7 +32,6 @@ Users should be able to:
 - CSS custom properties
 - SASS
 - JavaScript
-- Mobile-first workflow
 
 ### What I learned
 

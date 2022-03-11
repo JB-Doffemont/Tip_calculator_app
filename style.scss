@@ -63,13 +63,6 @@ body {
 
     .bill {
       margin-bottom: 2.5vh;
-
-      #dollar {
-        position: fixed;
-        top: 44.3%;
-        left: 28%;
-      }
-
       input {
         font-size: $fontSizeInput;
         font-family: $font;
@@ -82,6 +75,9 @@ body {
         padding-right: 0.5vw;
         color: $lightDarkCyan;
         cursor: pointer;
+        background-image: url("../tip-calculator-app-main/images/icon-dollar.svg");
+        background-repeat: no-repeat;
+        background-position: top 50% left 4%;
       }
 
       input:hover {
@@ -150,12 +146,6 @@ body {
     */
 
     .nb_people {
-      #person {
-        position: fixed;
-        top: 81%;
-        left: 28%;
-      }
-
       input {
         font-size: $fontSizeInput;
         font-family: $font;
@@ -168,6 +158,9 @@ body {
         color: $lightDarkCyan;
         outline-color: $lightCyan;
         cursor: pointer;
+        background-image: url("../tip-calculator-app-main/images/icon-person.svg");
+        background-repeat: no-repeat;
+        background-position: top 50% left 4%;
       }
 
       input:hover {

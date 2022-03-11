@@ -72,11 +72,6 @@ body {
 #splitter_container .left_card .bill {
   margin-bottom: 2.5vh;
 }
-#splitter_container .left_card .bill #dollar {
-  position: fixed;
-  top: 44.3%;
-  left: 28%;
-}
 #splitter_container .left_card .bill input {
   font-size: 24px;
   font-family: "Space Mono", monospace;
@@ -91,6 +86,9 @@ body {
   padding-right: 0.5vw;
   color: #7f9c9f;
   cursor: pointer;
+  background-image: url("../tip-calculator-app-main/images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% left 4%;
 }
 #splitter_container .left_card .bill input:hover {
   border: 1px solid #26c0ab;
@@ -143,11 +141,6 @@ body {
   outline-color: #26c0ab;
   width: 6vw;
 }
-#splitter_container .left_card .nb_people #person {
-  position: fixed;
-  top: 81%;
-  left: 28%;
-}
 #splitter_container .left_card .nb_people input {
   font-size: 24px;
   font-family: "Space Mono", monospace;
@@ -162,6 +155,9 @@ body {
   color: #7f9c9f;
   outline-color: #c5e4e7;
   cursor: pointer;
+  background-image: url("../tip-calculator-app-main/images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% left 4%;
 }
 #splitter_container .left_card .nb_people input:hover {
   border: 1px solid #26c0ab;
