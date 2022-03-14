@@ -24,13 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
       percentFifty.className = "";
 
       total_tip = bill.value * 0.05;
-
-      tipAmountPerPerson();
-      totalPerPerson();
+      calcul();
 
       person.addEventListener("input", () => {
-        tipAmountPerPerson();
-        totalPerPerson();
+        calcul();
       });
     });
   }
@@ -45,13 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
       percentFifty.className = "";
 
       total_tip = bill.value * 0.1;
-
-      tipAmountPerPerson();
-      totalPerPerson();
+      calcul();
 
       person.addEventListener("input", () => {
-        tipAmountPerPerson();
-        totalPerPerson();
+        calcul();
       });
     });
   }
@@ -66,13 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
       percentFifty.className = "";
 
       total_tip = bill.value * 1.15;
-
-      tipAmountPerPerson();
-      totalPerPerson();
+      calcul();
 
       person.addEventListener("input", () => {
-        tipAmountPerPerson();
-        totalPerPerson();
+        calcul();
       });
     });
   }
@@ -88,13 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
       percentFifty.className = "";
 
       total_tip = bill.value * 0.25;
-
-      tipAmountPerPerson();
-      totalPerPerson();
+      calcul();
 
       person.addEventListener("input", () => {
-        tipAmountPerPerson();
-        totalPerPerson();
+        calcul();
       });
     });
   }
@@ -109,13 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
       percentFive.className = "";
 
       total_tip = bill.value * 0.5;
-
-      tipAmountPerPerson();
-      totalPerPerson();
+      calcul();
 
       person.addEventListener("input", () => {
-        total_tip = (bill.value * percentAmount) / 100;
-        totalPerPerson();
+        calcul();
       });
     });
   }
@@ -136,39 +121,42 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event to calculate total amount of tips
     custom.addEventListener("input", () => {
       total_tip = (bill.value * custom.value) / 100;
-
-      tipAmountPerPerson();
-      totalPerPerson();
+      calcul();
       // Event to calculate tips + total per person
       person.addEventListener("input", () => {
         if (person.value == 0 || person.value == empty) {
           error.style.display = "inline";
         }
-        tipAmountPerPerson();
-        totalPerPerson();
+        calcul();
       });
     });
   });
+  // function to get tip amount per person and total per person
+  function calcul() {
+    function tipAmountPerPerson() {
+      tipPerson = total_tip / person.value;
 
-  function tipAmountPerPerson() {
-    tipPerson = total_tip / person.value;
-
-    if (tipPerson == Infinity) {
-      tipAmount.innerHTML = "$0.00";
-    } else {
-      tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
+      if (tipPerson == Infinity) {
+        tipAmount.innerHTML = "$0.00";
+        totalPerPerson.innerHTML = "0.00";
+      } else {
+        tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
+      }
+      reset.id = "completed";
     }
-    reset.id = "completed";
-  }
+    tipAmountPerPerson();
 
-  // Function to get the total amount by person
-  function totalPerPerson() {
-    if (tipPerson == Infinity) {
-      totalPerson.innerHTML = "$0.00";
-    } else {
-      totalPerson.innerHTML =
-        "$" + Math.round((bill.value / person.value + tipPerson) * 100) / 100;
+    // Function to get the total amount by person
+    function totalPerPerson() {
+      if (tipPerson == Infinity || tipPerson == NaN) {
+        totalPerson.innerHTML = "$0.00";
+        totalPerPerson.innerHTML = "0.00";
+      } else {
+        totalPerson.innerHTML =
+          "$" + Math.round((bill.value / person.value + tipPerson) * 100) / 100;
+      }
     }
+    totalPerPerson();
   }
 
   function resetField() {
