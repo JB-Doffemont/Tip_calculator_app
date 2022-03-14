@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Call elements from Dom
   let bill = document.querySelector("#bill_input");
-
   let percentFive = document.querySelector("#percent_five");
   let percentTen = document.querySelector("#percent_ten");
   let percentFifteen = document.querySelector("#percent_fifteen");
