@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Call elements from Dom
   let bill = document.querySelector("#bill_input");
-  let percentAmount = "";
+
   let percentFive = document.querySelector("#percent_five");
   let percentTen = document.querySelector("#percent_ten");
   let percentFifteen = document.querySelector("#percent_fifteen");
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let error = document.querySelector("#error_message");
 
   function tipAmountFive() {
-    // Event on click to define the percentage
     percentFive.addEventListener("click", () => {
       percentFive.className = "clicked";
       percentTen.className = "";
@@ -148,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to get the total amount by person
     function totalPerPerson() {
-      if (tipPerson == Infinity || tipPerson == NaN) {
+      if (tipPerson == Infinity) {
         totalPerson.innerHTML = "$0.00";
         totalPerPerson.innerHTML = "0.00";
       } else {

@@ -1,5 +1,5 @@
-@import "mixin.scss";
-@import "variables.scss";
+@import "./import/mixin.scss";
+@import "./import/variables.scss";
 
 body {
   background-color: $lightCyan;
@@ -123,6 +123,11 @@ body {
         background-color: $strongCyan;
         color: $strongDarkCyan;
         font-weight: 700;
+      }
+
+      .unclicked {
+        color: $white;
+        background-color: $strongDarkCyan;
       }
 
       #custom {

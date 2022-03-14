@@ -128,6 +128,10 @@ body {
   color: #00494d;
   font-weight: 700;
 }
+#splitter_container .left_card .select_tip .unclicked {
+  color: white;
+  background-color: #00494d;
+}
 #splitter_container .left_card .select_tip #custom {
   color: #5e7a7d;
   background-color: white;
