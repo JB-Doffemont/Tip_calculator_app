@@ -20,6 +20,13 @@ body {
 }
 
 /**
+* Title
+*/
+
+img {
+  margin-bottom: 4rem;
+}
+/**
 * Main Card
 */
 
@@ -28,8 +35,8 @@ body {
   padding: 1rem;
   display: flex;
   background-color: $white;
-  width: 49vw;
-  height: 50vh;
+  height: 25rem;
+  max-width: 50rem;
   font-size: 0.9rem;
   font-weight: 700;
   color: $lightDarkCyan;
@@ -56,10 +63,13 @@ body {
 
     .bill {
       margin-bottom: 2.5vh;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
       input {
         font-size: $fontSizeInput;
         font-family: $font;
-        height: 5vh;
+        height: 2.5rem;
         background-color: $veryLightCyan;
         border-style: none;
         @include border-radius(5px);
@@ -86,11 +96,15 @@ body {
     /**
     * Second part
     */
+    .select {
+      text-align: center;
+    }
 
     .select_tip {
       display: flex;
       flex-direction: column;
-      margin-bottom: 4vh;
+      margin-bottom: 1rem;
+      width: 90%;
       input {
         @include border-radius(5px);
         font-family: $font;
@@ -102,7 +116,8 @@ body {
         font-weight: 500;
         border: none;
         caret-color: $strongCyan;
-        margin-bottom: 1.2vh;
+        margin-bottom: 0.8rem;
+        margin-right: 0.8rem;
         cursor: pointer;
       }
 
@@ -144,10 +159,12 @@ body {
     */
 
     .nb_people {
+      width: 90%;
       input {
         font-size: $fontSizeInput;
         font-family: $font;
-        height: 5vh;
+        height: 2.5rem;
+        width: 100%;
         background-color: $veryLightCyan;
         border-style: none;
         @include border-radius(5px);
@@ -188,7 +205,8 @@ body {
 
     .tip {
       display: flex;
-      margin: 6vh 1vw;
+      margin: 4rem 1rem;
+      justify-content: space-around;
       .text {
         color: $white;
         font-weight: 400;
@@ -218,37 +236,38 @@ body {
     /**
     * Button reset
     */
+    .reset {
+      text-align: center;
+      #reset {
+        @include border-radius(5px);
+        width: 90%;
+        height: 3rem;
+        font-family: $font;
+        font-weight: 700;
+        font-size: 15px;
+        background-color: $strongCyan;
+        color: $strongDarkCyan;
+        opacity: 25%;
 
-    #reset {
-      @include border-radius(5px);
-      width: 18vw;
-      height: 5vh;
-      font-family: $font;
-      font-weight: 700;
-      font-size: 15px;
-      background-color: $strongCyan;
-      color: $strongDarkCyan;
-      opacity: 25%;
-      margin: 6vh 2vw;
-      border: none;
-      cursor: pointer;
-    }
+        border: none;
+        cursor: pointer;
+      }
 
-    #reset:hover {
-      background-color: $lightCyan;
-      opacity: 100%;
+      #reset:hover {
+        background-color: $lightCyan;
+        opacity: 100%;
+      }
     }
 
     #completed {
       @include border-radius(5px);
-      width: 18vw;
-      height: 5vh;
+      width: 90%;
+      height: 3rem;
       font-family: $font;
       font-weight: 700;
       font-size: 15px;
       background-color: $strongCyan;
       color: $strongDarkCyan;
-      margin: 6vh 2vw;
       border: none;
       opacity: none;
     }
@@ -295,8 +314,7 @@ body {
       */
       .bill {
         margin-bottom: 0.5vh;
-        display: flex;
-        flex-direction: column;
+        width: 100%;
         #dollar {
           position: fixed;
           top: 24.3%;
@@ -309,6 +327,7 @@ body {
       */
 
       .select_tip {
+        width: 100%;
         .select {
           display: flex;
           flex-wrap: wrap;
@@ -334,6 +353,7 @@ body {
 
       .nb_people {
         margin-bottom: 2rem;
+        width: 100%;
 
         input {
           width: 100%;
@@ -348,12 +368,12 @@ body {
     .right_card {
       width: 100%;
 
-      .total {
-        justify-content: space-around;
+      .tip {
+        margin: 2rem 1rem;
       }
 
-      .tip {
-        justify-content: space-around;
+      .total {
+        margin: 2rem 1rem;
       }
 
       .reset {
@@ -369,8 +389,12 @@ body {
       }
 
       #completed {
-        height: 6vh;
-        width: 79vw;
+        height: 2.5rem;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 1rem;
       }
     }
   }

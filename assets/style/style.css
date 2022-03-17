@@ -23,6 +23,13 @@ body {
 }
 
 /**
+* Title
+*/
+img {
+  margin-bottom: 4rem;
+}
+
+/**
 * Main Card
 */
 #splitter_container {
@@ -32,8 +39,8 @@ body {
   padding: 1rem;
   display: flex;
   background-color: white;
-  width: 49vw;
-  height: 50vh;
+  height: 25rem;
+  max-width: 50rem;
   font-size: 0.9rem;
   font-weight: 700;
   color: #7f9c9f;
@@ -65,11 +72,14 @@ body {
 }
 #splitter_container .left_card .bill {
   margin-bottom: 2.5vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 #splitter_container .left_card .bill input {
   font-size: 24px;
   font-family: "Space Mono", monospace;
-  height: 5vh;
+  height: 2.5rem;
   background-color: #f4fafa;
   border-style: none;
   -webkit-border-radius: 5px;
@@ -91,10 +101,14 @@ body {
   color: #00494d;
   font-weight: 700;
 }
+#splitter_container .left_card .select {
+  text-align: center;
+}
 #splitter_container .left_card .select_tip {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4vh;
+  margin-bottom: 1rem;
+  width: 90%;
 }
 #splitter_container .left_card .select_tip input {
   -webkit-border-radius: 5px;
@@ -104,12 +118,13 @@ body {
   color: white;
   background-color: #00494d;
   font-size: 24px;
-  height: 6vh;
-  width: 6.5vw;
+  height: 3.5rem;
+  width: 6rem;
   font-weight: 500;
   border: none;
   caret-color: #26c0ab;
-  margin-bottom: 1.2vh;
+  margin-bottom: 0.8rem;
+  margin-right: 0.8rem;
   cursor: pointer;
 }
 #splitter_container .left_card .select_tip input:hover {
@@ -139,10 +154,14 @@ body {
   outline-color: #26c0ab;
   width: 6vw;
 }
+#splitter_container .left_card .nb_people {
+  width: 90%;
+}
 #splitter_container .left_card .nb_people input {
   font-size: 24px;
   font-family: "Space Mono", monospace;
-  height: 5vh;
+  height: 2.5rem;
+  width: 100%;
   background-color: #f4fafa;
   border-style: none;
   -webkit-border-radius: 5px;
@@ -180,7 +199,8 @@ body {
 }
 #splitter_container .right_card .tip, #splitter_container .right_card .total {
   display: flex;
-  margin: 6vh 1vw;
+  margin: 4rem 1rem;
+  justify-content: space-around;
 }
 #splitter_container .right_card .tip .text, #splitter_container .right_card .total .text {
   color: white;
@@ -200,23 +220,25 @@ body {
   margin-left: 6.2vw;
   color: #26c0ab;
 }
-#splitter_container .right_card #reset {
+#splitter_container .right_card .reset {
+  text-align: center;
+}
+#splitter_container .right_card .reset #reset {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  width: 18vw;
-  height: 5vh;
+  width: 90%;
+  height: 3rem;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 15px;
   background-color: #26c0ab;
   color: #00494d;
   opacity: 25%;
-  margin: 6vh 2vw;
   border: none;
   cursor: pointer;
 }
-#splitter_container .right_card #reset:hover {
+#splitter_container .right_card .reset #reset:hover {
   background-color: #c5e4e7;
   opacity: 100%;
 }
@@ -224,14 +246,13 @@ body {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  width: 18vw;
-  height: 5vh;
+  width: 90%;
+  height: 3rem;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 15px;
   background-color: #26c0ab;
   color: #00494d;
-  margin: 6vh 2vw;
   border: none;
   opacity: none;
 }
@@ -282,13 +303,15 @@ body {
   }
   #splitter_container .left_card .bill {
     margin-bottom: 0.5vh;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
   }
   #splitter_container .left_card .bill #dollar {
     position: fixed;
     top: 24.3%;
     left: 12%;
+  }
+  #splitter_container .left_card .select_tip {
+    width: 100%;
   }
   #splitter_container .left_card .select_tip .select {
     display: flex;
@@ -307,6 +330,7 @@ body {
   }
   #splitter_container .left_card .nb_people {
     margin-bottom: 2rem;
+    width: 100%;
   }
   #splitter_container .left_card .nb_people input {
     width: 100%;
@@ -314,11 +338,11 @@ body {
   #splitter_container .right_card {
     width: 100%;
   }
-  #splitter_container .right_card .total {
-    justify-content: space-around;
-  }
   #splitter_container .right_card .tip, #splitter_container .right_card .total {
-    justify-content: space-around;
+    margin: 2rem 1rem;
+  }
+  #splitter_container .right_card .total {
+    margin: 2rem 1rem;
   }
   #splitter_container .right_card .reset {
     text-align: center;
@@ -332,8 +356,12 @@ body {
     margin-bottom: 1rem;
   }
   #splitter_container .right_card #completed {
-    height: 6vh;
-    width: 79vw;
+    height: 2.5rem;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   #footer {
