@@ -25,6 +25,7 @@ body {
 
 #splitter_container {
   @include border-radius(15px);
+  padding: 1rem;
   display: flex;
   background-color: $white;
   width: 49vw;
@@ -39,9 +40,6 @@ body {
 
   .left_card {
     width: 50%;
-    margin: 1rem;
-    padding-top: 0.9rem;
-    padding-left: 0.9rem;
 
     .label {
       margin-bottom: 1vh;
@@ -185,7 +183,6 @@ body {
 
   .right_card {
     width: 50%;
-    margin: 1rem;
     @include border-radius(15px);
     background-color: $strongDarkCyan;
 
@@ -280,11 +277,12 @@ body {
   #splitter_container {
     display: flex;
     flex-direction: column;
-    max-width: 23.5625rem;
+    max-width: 24rem;
     min-width: 24rem;
     height: 100vh;
     left: 0;
     top: 16%;
+    height: 50rem;
 
     /**
     * Left side
@@ -297,6 +295,8 @@ body {
       */
       .bill {
         margin-bottom: 0.5vh;
+        display: flex;
+        flex-direction: column;
         #dollar {
           position: fixed;
           top: 24.3%;
@@ -309,20 +309,18 @@ body {
       */
 
       .select_tip {
-        max-width: 23.5625rem;
-        min-width: 24rem;
         .select {
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
           gap: 0.9375rem;
-        }
+          justify-content: center;
 
-        input {
-          height: 5vh;
-          width: 22.5vw;
-          margin-right: 5px;
-          margin-bottom: 11px;
+          input {
+            height: 3rem;
+            width: 9rem !important;
+            margin-right: 5px;
+            margin-bottom: 11px;
+          }
         }
 
         .custom_clicked {
@@ -335,9 +333,10 @@ body {
       */
 
       .nb_people {
-        #person {
-          top: 62%;
-          left: 12%;
+        margin-bottom: 2rem;
+
+        input {
+          width: 100%;
         }
       }
     }
@@ -347,30 +346,31 @@ body {
     */
 
     .right_card {
-      width: 90%;
+      width: 100%;
 
-      .tip {
-        margin: 2vh 6vw;
-
-        #tip_amount {
-          margin-left: 25vw;
-        }
-
-        #total_person {
-          margin-left: 30vw;
-        }
+      .total {
+        justify-content: space-around;
       }
 
-      #reset {
-        height: 6vh;
-        width: 79vw;
-        margin: 1vh 5vw;
+      .tip {
+        justify-content: space-around;
+      }
+
+      .reset {
+        text-align: center;
+        #reset {
+          height: 2.5rem;
+          width: 90%;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          margin-bottom: 1rem;
+        }
       }
 
       #completed {
         height: 6vh;
         width: 79vw;
-        margin: 1vh 5vw;
       }
     }
   }
