@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Call elements from Dom
   let bill = document.querySelector("#bill_input");
+  let percent = Array.from(document.querySelectorAll(".percent"));
   let percentFive = document.querySelector("#percent_five");
   let percentTen = document.querySelector("#percent_ten");
   let percentFifteen = document.querySelector("#percent_fifteen");
@@ -15,11 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function tipAmountFive() {
     percentFive.addEventListener("click", () => {
-      percentFive.className = "clicked";
-      percentTen.className = "";
-      percentFifteen.className = "";
-      percentTwentyFive.className = "";
-      percentFifty.className = "";
+      SelectTipActive();
+      percentFive.classList.add("clicked");
 
       total_tip = bill.value * 0.05;
       calcul();
@@ -33,11 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function tipAmountTen() {
     percentTen.addEventListener("click", () => {
-      percentTen.className = "clicked";
-      percentFive.className = "";
-      percentFifteen.className = "";
-      percentTwentyFive.className = "";
-      percentFifty.className = "";
+      SelectTipActive();
+      percentTen.classList.add("clicked");
 
       total_tip = bill.value * 0.1;
       calcul();
@@ -51,11 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function tipAmountFifteen() {
     percentFifteen.addEventListener("click", () => {
-      percentFifteen.className = "clicked";
-      percentTen.className = "";
-      percentFive.className = "";
-      percentTwentyFive.className = "";
-      percentFifty.className = "";
+      SelectTipActive();
+      percentFifteen.classList.add("clicked");
 
       total_tip = bill.value * 1.15;
       calcul();
@@ -70,11 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function tipAmountTwentyFive() {
     percentTwentyFive.addEventListener("click", () => {
-      percentTwentyFive.className = "clicked";
-      percentTen.className = "";
-      percentFifteen.className = "";
-      percentFive.className = "";
-      percentFifty.className = "";
+      SelectTipActive();
+      percentTwentyFive.classList.add("clicked");
 
       total_tip = bill.value * 0.25;
       calcul();
@@ -88,11 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function tipAmountFifty() {
     percentFifty.addEventListener("click", () => {
-      percentFifty.className = "clicked";
-      percentTen.className = "";
-      percentFifteen.className = "";
-      percentTwentyFive.className = "";
-      percentFive.className = "";
+      SelectTipActive();
+      percentFifty.classList.add("clicked");
 
       total_tip = bill.value * 0.5;
       calcul();
@@ -109,17 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
   custom.addEventListener("click", () => {
     custom.type = "number";
     custom.value = "";
-    custom.className = "custom_clicked";
-    percentFive.className = "";
-    percentTen.className = "";
-    percentFifteen.className = "";
-    percentTwentyFive.className = "";
-    percentFifty.className = "";
+    SelectTipActive();
+    custom.classList.add("custom_clicked");
 
     // Event to calculate total amount of tips
     custom.addEventListener("input", () => {
-      total_tip = (bill.value * custom.value) / 100;
-      calcul();
+      if (custom.value > 0 && custom.value <= 100) {
+        total_tip = (bill.value * custom.value) / 100;
+        calcul();
+      }
       // Event to calculate tips + total per person
       person.addEventListener("input", () => {
         if (person.value == 0 || person.value == empty) {
@@ -129,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-  // function to get tip amount per person and total per person
+  // Function to get tip amount per person and total per person
   function calcul() {
     function tipAmountPerPerson() {
       tipPerson = total_tip / person.value;
@@ -138,7 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
         tipAmount.innerHTML = "$0.00";
         totalPerPerson.innerHTML = "0.00";
       } else {
-        tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
+        if (bill.value > 0 && person.value > 0) {
+          tipAmount.innerHTML = "$" + Math.round(tipPerson * 100) / 100;
+        }
       }
       reset.id = "completed";
     }
@@ -150,8 +136,11 @@ document.addEventListener("DOMContentLoaded", () => {
         totalPerson.innerHTML = "$0.00";
         totalPerPerson.innerHTML = "0.00";
       } else {
-        totalPerson.innerHTML =
-          "$" + Math.round((bill.value / person.value + tipPerson) * 100) / 100;
+        if (bill.value > 0 && person.value > 0) {
+          totalPerson.innerHTML =
+            "$" +
+            Math.round((bill.value / person.value + tipPerson) * 100) / 100;
+        }
       }
     }
     totalPerPerson();
@@ -190,4 +179,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   inputActive();
+
+  function SelectTipActive() {
+    percent.forEach((element) => {
+      if (element.classList.contains("clicked")) {
+        element.classList.remove("clicked");
+      }
+    });
+  }
 });
