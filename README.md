@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here](https://tip-calculator-app-henna.vercel.app/)
+- Solution URL: [Click here](https://tip-calculator-app-six-bay.vercel.app/)
 
 ### Built with
 

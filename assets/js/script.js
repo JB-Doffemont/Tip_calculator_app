@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       SelectTipActive();
       percentFifteen.classList.add("clicked");
 
-      total_tip = bill.value * 1.15;
+      total_tip = bill.value * 0.15;
       calcul();
 
       person.addEventListener("input", () => {
